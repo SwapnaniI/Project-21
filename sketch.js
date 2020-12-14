@@ -6,13 +6,13 @@ var thick, damage;
 function setup() {
 
   createCanvas(1600,400);  
-
-  bullet = createSprite(400, 200, 50, 25);
-  wall = createSprite(1200, 200, thick ,200);
-
+  
   speed=Math.round(random(223,321));
   weight=Math.round(random(30,52));
   thick=random(22,83);
+
+  bullet = createSprite(400, 200, 50, 25);
+  wall = createSprite(1200, 200, thick ,200);
 
   damage=(0.5*weight*speed*speed)/(thick*thick*thick);
   bullet.velocityX=speed;
